@@ -1,0 +1,61 @@
+---
+#commenting to modify code 
+- name: update web, nfs servers
+  hosts: webservers, nfs
+  user: ec2-user
+  become: yes
+  become_user: root
+  tasks:
+    - name: ensure wireshark is at the latest version
+      yum:
+        name: wireshark
+        state: latest 
+
+- name: update LB server
+  hosts: loadbalancer
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+    - name: Update apt repo
+      apt: 
+        update_cache: yes
+
+    - name: ensure wireshark is at the latest version
+      apt:
+        name: wireshark
+        state: latest
+
+- name: update DB server
+  hosts: db
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+    - name: Update apt repo
+      apt: 
+        update_cache: yes
+
+    - name: ensure wireshark is at the latest version
+      apt:
+        name: wireshark
+        state: latest
+
+- name: create directory, files and set timezone on all servers
+  hosts: webservers, nfs, loadbalancer, db
+  become: yes
+  become_user: root
+  tasks:
+    - name: creating directory
+      file: 
+        path: /home/
+        state: directory
+
+    - name: create file
+      file:
+        path: /home/index.html
+        state: touch
+
+    - name: set timezone
+      timezone:
+        name: Africa/Lagos 
