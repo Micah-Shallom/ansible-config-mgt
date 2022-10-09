@@ -2,7 +2,7 @@
 #commenting to modify code 
 - name: update web, nfs servers
   hosts: webservers, nfs
-  user: ec2-user
+  remote_user: ec2-user
   become: yes
   become_user: root
   tasks:
