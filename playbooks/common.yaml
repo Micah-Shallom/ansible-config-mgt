@@ -12,22 +12,7 @@
         state: latest 
 
 - name: update LB server
-  hosts: loadbalancer
-  remote_user: ubuntu
-  become: yes
-  become_user: root
-  tasks:
-    - name: Update apt repo
-      apt: 
-        update_cache: yes
-
-    - name: ensure wireshark is at the latest version
-      apt:
-        name: wireshark
-        state: latest
-
-- name: update DB server
-  hosts: db
+  hosts: loadbalancer , db
   remote_user: ubuntu
   become: yes
   become_user: root
