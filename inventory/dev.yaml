@@ -1,7 +1,7 @@
 [nfs] 
 172.31.37.216 ansible_ssh_user='ec2-user'
 
-[loadbalancer]
+[lb]
 172.31.40.68 ansible_ssh_user='ubuntu'
 
 [webservers]
