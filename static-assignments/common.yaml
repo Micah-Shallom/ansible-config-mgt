@@ -12,7 +12,7 @@
         state: latest 
 
 - name: update LB server
-  hosts: loadbalancer , db
+  hosts: lb , db
   remote_user: ubuntu
   become: yes
   become_user: root
