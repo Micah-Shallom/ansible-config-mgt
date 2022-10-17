@@ -15,5 +15,5 @@
   import_playbook: ../static-assignments/mysql-deploy.yaml
 
 - name: Loadbalancers assignment
-  import_playbook: ../static-assignments/loadbalancers.yml
+  import_playbook: ../static-assignments/loadbalancers.yaml
   when: load_balancer_is_required 
