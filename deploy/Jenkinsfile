@@ -2,19 +2,10 @@ pipeline{
     agent any
 
     stages{
-        stage("Build"){
+        stage('SCM Checkout'){
             steps{
-                script{
-                    sh " echo 'Building application' "
-                }
+                git branch: 'feature/jenkinspipeline-stages', credentialsId: '750f9158-6e56-4635-88e3-0dc2c5019156', url: 'https://github.com/Micah-Shallom/ansible-config-mgt.git'
             }
         }
-        stage('Test'){
-            steps{
-                script{
-                    sh " echo 'Testing the application' "
-                }
-            }
-        }
-    }
+}
 }
