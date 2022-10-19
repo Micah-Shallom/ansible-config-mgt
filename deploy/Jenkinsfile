@@ -6,8 +6,8 @@ pipeline{
     }
 
     parameters {
-      string(name: 'inventory', defaultInventoryValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
-      string(name: 'playbook', defaultPlaybookValue: 'site.yaml',  description: 'This is the playbook file for the environment to deploy configuration')
+      string(name: 'inventory', defaultValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
+      string(name: 'playbook', defaultValue: 'site.yaml',  description: 'This is the playbook file for the environment to deploy configuration')
     }
 
     stages{
