@@ -6,4 +6,4 @@ ansible_python_interpreter=/usr/bin/python
 172.31.18.103 ansible_ssh_user=ec2-user
 
 [db]
-172.31.25.239 ansible_ssh_user=ubuntu
+172.31.25.239 ansible_ssh_user=ec2-user
