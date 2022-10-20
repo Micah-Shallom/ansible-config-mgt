@@ -14,6 +14,6 @@
 - name: database mysql configuration
   import_playbook: ../static-assignments/mysql-deploy.yaml
 
-# - name: nginx
-#   import_playbook: ../static-assignments/loadbalancers.yaml
-#   when: load_balancer_is_required 
+- name: nginx
+  import_playbook: ../static-assignments/loadbalancers.yaml
+  when: load_balancer_is_required 

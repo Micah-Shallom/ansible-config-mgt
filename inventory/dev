@@ -1,10 +1,9 @@
-[todo]
-172.31.85.9 ansible_ssh_user=ec2-user
-172.31.86.146 ansible_ssh_user=ec2-user
-
 [db:vars]
 ansible_user=ec2-user
 ansible_python_interpreter=/usr/bin/python
 
+[nginx]
+172.31.18.103 ansible_ssh_user=ec2-user
+
 [db]
-172.31.90.141 ansible_ssh_user=ubuntu
+172.31.25.239 ansible_ssh_user=ubuntu
