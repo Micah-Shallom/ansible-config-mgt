@@ -1,3 +1,22 @@
+pipeline{
+    agent any
+    stages{
+        stage('Build'){
+            steps{
+                script{
+                    sh "echo 'shallom'"
+                }
+            }
+        }
+        stage('Test'){
+            steps{
+                script{
+                    sh "echo 'shallom'"
+                }
+            }
+        }
+    }
+}
 // pipeline{
 //     agent any
 
