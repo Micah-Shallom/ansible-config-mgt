@@ -10,9 +10,9 @@
 # - name: Webserver assignment
 #   import_playbook: ../static-assignments/uat-webservers.yaml
 
-- hosts: db
-- name: database mysql configuration
-  import_playbook: ../static-assignments/mysql-deploy.yaml
+# - hosts: db
+# - name: database mysql configuration
+#   import_playbook: ../static-assignments/mysql-deploy.yaml
 
 # - name: nginx
 #   import_playbook: ../static-assignments/loadbalancers.yaml
@@ -20,3 +20,7 @@
 
 # - name: artifactory
 #   import_playbook: ../static-assignments/artifactory.yaml
+
+- hosts: todo
+- name: app deployment
+  import_playbook: ../static-assignments/deployment.yaml

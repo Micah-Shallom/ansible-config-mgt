@@ -3,3 +3,6 @@
 
 [db]
 172.31.80.33 ansible_ssh_user=ec2-user
+
+[todo]
+172.31.81.223 ansible_ssh_user=ec2-user
