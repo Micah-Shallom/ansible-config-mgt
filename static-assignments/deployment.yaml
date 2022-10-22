@@ -53,7 +53,7 @@
         url: http://34.203.14.120:8082/artifactory/SHALLOM/php-todo
         dest: /home/ec2-user/
         url_username: admin
-        url_password: APBKm4qXoDaoE4pTfHAD6iPnJMh  
+        url_password: APAMALPuha2rbZEbjhfqmwC3PUD  
 
 
     - name: unzip the artifacts
