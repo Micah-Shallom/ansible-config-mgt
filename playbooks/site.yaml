@@ -20,4 +20,3 @@
 
 - name: artifactory
   import_playbook: ../static-assignments/artifactory.yaml
-  when: load_balancer_is_required 
