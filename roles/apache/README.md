@@ -4,7 +4,7 @@
 
 An Ansible Role that installs Apache 2.x on RHEL/CentOS, Debian/Ubuntu, SLES and Solaris.
 
-### Requirements
+## Requirements
 
 If you are using SSL/TLS, you will need to provide your own certificate and key files. You can generate a self-signed certificate with a command like `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout example.key -out example.crt`.
 
@@ -85,11 +85,11 @@ The SSL protocols and cipher suites that are used/allowed when clients make secu
 The default values for the `AllowOverride` and `Options` directives for the `documentroot` directory of each vhost.  A vhost can overwrite these values by specifying `allow_override` or `options`.
 
     apache_mods_enabled:
-      - rewrite
-      - ssl
+      - rewrite.load
+      - ssl.load
     apache_mods_disabled: []
 
-Which Apache mods to enable or disable (these will be symlinked into the appropriate location). See the `mods-available` directory inside the apache configuration directory (`/etc/apache2/mods-available` on Debian/Ubuntu) for all the available mods.
+(Debian/Ubuntu ONLY) Which Apache mods to enable or disable (these will be symlinked into the appropriate location). See the `mods-available` directory inside the apache configuration directory (`/etc/apache2/mods-available` by default) for all the available mods.
 
     apache_packages:
       - [platform-specific]
@@ -99,10 +99,6 @@ The list of packages to be installed. This defaults to a set of platform-specifi
     apache_state: started
 
 Set initial Apache daemon state to be enforced when this role is run. This should generally remain `started`, but you can set it to `stopped` if you need to fix the Apache config during a playbook run or otherwise would not like Apache started at the time this role is run.
-
-    apache_enabled: yes
-
-Set the Apache service boot time status. This should generally remain `yes`, but you can set it to `no` if you need to run Ansible while leaving the service disabled.
 
     apache_packages_state: present
 
