@@ -55,6 +55,8 @@ source ~/.bash_profile
 ##### Verify Composer is installed or not
 - composer --version
 
+Ensure to install mysql-client on the ansible-jenkins server <br/>
+and open bind address 0.0.0.0 at ` /etc/mysql/mysql.conf.d/mysqld.cnf`
 
 #### Install phpunit, phploc
 =====================================
