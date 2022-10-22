@@ -105,17 +105,31 @@ mysql_config_include_files: []
 #  - src: path/relative/to/playbook/file.cnf
 #  - { src: path/relative/to/playbook/anotherfile.cnf, force: yes }
 
+# # Databases.
+# mysql_databases:
+#   - name: tooling
+#     collation: utf8_general_ci
+#     encoding: utf8
+#     replicate: 1
+
+# # Users.
+# mysql_users:
+#   - name: webaccess
+#     host: 0.0.0.0
+#     password: password
+#     priv: '*.*:ALL,GRANT'
+
 # Databases.
 mysql_databases:
-  - name: tooling
+  - name: homestead
     collation: utf8_general_ci
     encoding: utf8
     replicate: 1
 
 # Users.
 mysql_users:
-  - name: webaccess
-    host: 0.0.0.0
+  - name: homestead
+    host: 172.31.25.7   # private ip of the jenkins-server serving as mysql db client
     password: password
     priv: '*.*:ALL,GRANT'
 
