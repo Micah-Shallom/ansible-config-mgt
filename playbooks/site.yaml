@@ -21,6 +21,10 @@
 # - name: artifactory
 #   import_playbook: ../static-assignments/artifactory.yaml
 
-- hosts: todo
-- name: app deployment
-  import_playbook: ../static-assignments/deployment.yaml
+# - hosts: todo
+# - name: app deployment
+#   import_playbook: ../static-assignments/deployment.yaml
+
+- hosts: sonarqube
+- name: sonarqube deployment
+  import_playbook: ../static-assignments/sonar.yaml
