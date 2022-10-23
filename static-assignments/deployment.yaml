@@ -50,7 +50,7 @@
 
     - name: Download the artifact
       get_url:
-        url: http://34.203.14.120:8082/artifactory/SHALLOM/php-todo
+        url: http://54.146.228.229:8082/artifactory/SHALLOM/php-todo
         dest: /home/ec2-user/
         url_username: admin
         url_password: APAMALPuha2rbZEbjhfqmwC3PUD  
