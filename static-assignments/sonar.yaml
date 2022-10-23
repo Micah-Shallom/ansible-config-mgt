@@ -2,4 +2,4 @@
 - hosts: sonarqube
   become: true
   roles:
-     - lrk.sonarqube
+     - sonarqube

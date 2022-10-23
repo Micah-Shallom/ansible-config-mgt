@@ -1,7 +1,0 @@
-.DS_Store
-*.retry
-.vagrant
-tests/roles
-tests/galaxy_roles
-__pycache__
-INSTALL.rst

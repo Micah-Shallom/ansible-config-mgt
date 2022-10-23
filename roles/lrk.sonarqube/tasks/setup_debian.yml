@@ -1,7 +1,0 @@
----
-- name: "Ensure required packages are installed"
-  package:
-    name: "{{ item }}"
-    state: "present"
-  with_items:
-    - procps
